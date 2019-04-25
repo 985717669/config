@@ -6,4 +6,6 @@ spring:
           uri: lb://service-hi
           predicates:
             - Path=/api-b/**
+          filters:
+            - StripPrefix=1 # 去除请求地址中的api-b
 
