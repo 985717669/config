@@ -3,7 +3,7 @@ spring:
     gateway:
       routes:
         - id:service-hi
-         uri: http://localhost:8763/
-         predicates:
-           - Path=/api-b/**
+          uri: lb://service-hi
+          predicates:
+            - Path=/api-b/**
 
