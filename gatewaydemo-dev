@@ -7,10 +7,10 @@ spring:
                # 为true,自动创建路由,路由访问方式：http://Gateway_HOST:Gateway_PORT/大写的serviceId/**，其中微服务应用名默认大写访问 
         enabled: true
     routes:
-      - id:service-say
-          uri: lb://service-say
-          predicates:
-            - Path=/api-b/**
-          filters:
-            - StripPrefix=1 # 去除请求地址中的api-b
+    - id:service-say
+      uri: lb://service-say
+      predicates:
+        - Path=/api-b/**
+      filters:
+        - StripPrefix=1 # 去除请求地址中的api-b
 
