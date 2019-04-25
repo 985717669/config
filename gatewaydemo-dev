@@ -2,9 +2,7 @@
 gateway:
   routes:
     -id:service-hi
-     uri: lb://SERVICE-HI
+     uri: http://localhost:8763
      predicates:
      -Path=/api-b/**
-     filters:
-     - RewritePath=/customeradd,/customer/add
 
