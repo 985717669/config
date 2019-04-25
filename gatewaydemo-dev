@@ -1,8 +1,8 @@
 
 gateway:
   routes:
-    -id:service-hi
+    - id:service-hi
      uri: http://localhost:8763/
      predicates:
-       -Path=/api-b/**
+       - Path=/api-b/**
 
